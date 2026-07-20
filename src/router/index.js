@@ -1,16 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UserList from '@/pages/UserList.vue'
-import UserDetail from '@/pages/UserDetail.vue'
-import CreateUser from '@/pages/CreateUser.vue'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
+import Profile from '../views/Profile.vue'
 
 const routes = [
-  { path: '/', redirect: '/users' },
-  { path: '/users', component: UserList },
-  { path: '/user/:id', component: UserDetail },
-  { path: '/create-user', component: CreateUser }
+  { path: '/', component: Home },
+  { path: '/about', component: About },
+  { path: '/contact', component: Contact },
+  { path: '/profile', component: Profile }
 ]
 
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes,
 })
+
+export default router
